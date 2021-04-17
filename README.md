@@ -1,21 +1,31 @@
 SQL Query Evaluator
 
 Authors
+
 Ishan Gaikwad(ishangaikwad777@gmail.com)
+
 Jidnyasa Kolhe(jkolhe@umassd.edu)
+
 Kedar Sambhus(ksambhus@umassd.edu)
+
 Description
+
 This project was for a course on Database Design (CIS 552).
+
 
 We implemented an SQL query evaluator with operational support for Select, Project, Join, Union, Aggregate, and standard optimization techniques such as projection pushdown, selection pushdown and cross product to join conversion. Our program will receive a SQL File with a collection of statements. They include:
 
 CREATE TABLE: Defines a representational schema for the data.
+
 SELECT: Performs filtering and other operations on the data. The result of these operations will be in a standardized row-oriented data form.
+
 Parser
 An SQL parser parses a query into an intelligible string field. An open-source SQL parser was used in this project. Documentation and guidelines on how to use this parser is available at: https://doc.odin.cse.buffalo.edu/jsqlparser/
 
+
 Schema
 The data directory contains files named table name.csv where table name is the name used in a CREATE TABLE statement. The result of CREATE TABLE statements is not to create a new file, but simply to synchronize the given TCPH sql schema to an existing .csv file. Delimiters used in these files, (a) vertical-pipe ("|") as a field delimiter, and (b) newlines ("\n") as record delimiters.
+
 
 Execution
 Run this program using the following syntax:
@@ -26,6 +36,7 @@ java -jar checkpoint1.jar TCPH-queries/queries.SQL [data_directory]
 • For each CREATE TABLE table name statement, there is a corresponding table .csv in the data directory.
 • TCPH-queries : A path to a directory containing TCPH queries for this test
 • query.sql: One or more sql files for us to parse and evaluate.
+
 
 Example:
 $> ls TCPH-data-0.1
